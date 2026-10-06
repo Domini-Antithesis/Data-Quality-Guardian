@@ -40,7 +40,6 @@ Capstone project **#14 — Data Quality Guardian** (Data Engineering, level: Adv
 - [Design decisions](#design-decisions)
 - [Roadmap](#roadmap)
 - [Contributing](#contributing)
-- [License](#license)
 - [Acknowledgments](#acknowledgments)
 
 ---
@@ -436,31 +435,6 @@ layers will correctly refuse it. `pytest -q` runs the full offline suite.
 - The server binds to `127.0.0.1` and has no authentication. Put it behind a reverse proxy with auth before exposing it.
 - Only the issue summaries and a handful of example values are sent to the LLM, never the whole dataset.
 - The Docker container runs as a non-root user and only `/app/data` is writable.
-
-## Running alongside the other capstone projects
-
-Every service binds a dedicated host port, so all four projects can run at the
-same time. Both n8n projects originally shipped hard-coded to 5678 and 8080,
-which meant the second stack to start came up silently unreachable; each host
-port now comes from that project's own `.env`.
-
-| Project | Service | URL |
-|---|---|---|
-| 1 · Research Intelligence Bot | n8n canvas | <http://localhost:5679> |
-| 1 · Research Intelligence Bot | Dashboard | <http://localhost:8201> |
-| 1 · Research Intelligence Bot | ChromaDB | <http://localhost:8202> |
-| 1 · Research Intelligence Bot | Ollama | <http://localhost:11434> |
-| 2 · Supply Chain Monitor System | n8n canvas | <http://localhost:5678> |
-| 2 · Supply Chain Monitor System | Dashboard | <http://localhost:8101> |
-| 3 · Feedback Intelligence Pipeline | Web app | <http://localhost:8301> |
-| 4 · Data Quality Guardian | Web app | <http://localhost:8401> |
-
-To move a service, change its host port in that project's `.env` and restart —
-nothing outside that file needs to know.
-
-## License
-
-MIT. See [LICENSE](LICENSE).
 
 ## Acknowledgments
 
