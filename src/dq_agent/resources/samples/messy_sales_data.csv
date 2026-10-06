@@ -1,0 +1,250 @@
+OrderID,OrderDate,Product,Category,City,SalesRep,CustomerEmail,Quantity,UnitPrice,Revenue,DiscountPct,Currency,Notes
+ORD-10072,29/01/2026,Steel Bracket,Hardware,Bengaluru,priya sharma,priya.57@example.com,34,4494.83,"152,824.22",5,INR,
+ORD-10104,2026-02-08,Smart Device,Electronics,Bengaluru,Ananya Iyer,ananya.3@example.com,1,3843.29,"3,843.29",20,INR,Priority delivery
+ORD-10093,2026-02-05,Mini Sensor,Electronics,Mumbai,vikram singh,missing@,12,1221.50,"14,658.00",10,INR,
+ORD-10203,2026-03-13,Green Doohickey,Widgets,Pune,Rohan Mehta,rohan.5@example.com,28,4122.88,"115,440.64",10,INR,
+ORD-10156,2026-02-26,Green Doohickey,Widgets,BENGALURU,Ananya Iyer,ananya.24@example.com,14,3731.63,"52,242.82",20,INR,Priority delivery
+ORD-10204,2026-03-14,Smart Device,Electronics,BENGALURU,Priya Sharma,priya.29@example.com,21,239.88,"5,037.48",5,INR,
+ORD-10233,2026-03-23,Steel Bracket,Hardware,Pune,Rohan Mehta,rohan.20@example.com,14,2247.06,"31,458.84",20,INR,Bulk order
+ORD-10193,2026-03-10,Red Gadget,Gadgets,Hyderabad,Rohan Mehta,rohan.39@example.com,2,3748.61,"7,497.22",10,INR,Bulk order
+ORD-10009,2026-01-08,Green Doohickey,Widgets,HYDERABAD,priya sharma,priya.91@example.com,10,1046.63,"10,466.30",5,INR,
+ORD-10102,2026-02-08,Cable Set,Accessories,Bengaluru,Priya Sharma,priya.91@example.com,31,1051.60,"32,599.60",,INR,
+ORD-10070,28/01/2026,Steel Bracket,Hardware,Mumbai,vikram singh,vikram.58@example.com,30,1746.62,"52,398.60",15,INR,
+ORD-10158,2026-02-26,Blue Widget,Widgets,Bengaluru,Meera Nair,meera.18@example.com,38,4393.40,"166,949.20",20,INR,
+ORD-10103,2026-02-08,Smart Device,Electronics,PUNE,Ananya Iyer,ananya.80@example.com,2,2706.96,"5,413.92",0,INR,
+ORD-10219,2026-03-19,Cable Set,Accessories,Hyderabad,meera nair,meera.30@example.com,3,3939.93,"11,819.79",15,INR,
+ORD-10109,2026-02-10,Copper Fitting,Hardware,Chennai,Rohan Mehta,rohan.40@example.com,3,708.83,"2,126.49",20,INR,Bulk order
+ORD-10099,2026-02-07,Cable Set,Accessories,Bengaluru,Priya Sharma,priya.91@example.com,9,3045.88,"27,412.92",15,INR,
+ORD-10126,16 February 2026,Red Gadget,Gadgets,  Mumbai ,Ananya Iyer,ananya.37@example.com,39,193806.00,"75,584.34",20,INR,
+ORD-10003,2026-01-06,Green Doohickey,Widgets,Delhi,Vikram Singh,vikram.88@example.com,33,1235.24,"40,762.92",,INR,
+ORD-10120,2026-02-14,Cable Set,Accessories,Pune,Rohan Mehta,n/a,38,754.46,"28,669.48",,INR,
+ORD-10082,01 February 2026,Cable Set,Accessories,chennai,Rohan Mehta,rohan.62@example.com,18,4212.77,"75,829.86",,INR,Bulk order
+ORD-10012,09 January 2026,Smart Device,Electronics,Bengaluru,Priya Sharma,priya.92@example.com,20,316.52,"6,330.40",10,INR,
+ORD-10021,12 January 2026,Blue Widget,Widgets,  Pune ,Meera Nair,meera.62@example.com,14,2495.74,"34,940.36",,INR,Repeat customer
+ORD-10010,08/01/2026,Red Gadget,Gadgets,Hyderabad,Rohan Mehta,rohan.85@example.com,12,761.93,"9,143.16",20,INR,
+ORD-10239,2026-03-25,Green Doohickey,Widgets,Bengaluru,Priya Sharma,priya.78@example.com,17,3923.94,"66,706.98",0,INR,
+ORD-10171,2026-03-03,Green Doohickey,Widgets,  Delhi ,Ananya Iyer,ananya.22@example.com,9,1058.51,"9,526.59",10,INR,Contract pricing
+ORD-10183,07/03/2026,Red Gadget,Gadgets,  Bengaluru ,Meera Nair,meera.99@example.com,18,4159.16,"74,864.88",,INR,
+ORD-10200,2026-03-12,Red Gadget,Gadgets,Hyderabad,Meera Nair,meera.74@example.com,30,1929.28,"57,878.40",,INR,Contract pricing
+ORD-10163,2026-02-28,Steel Bracket,Hardware,Bengaluru,Priya Sharma,priya.44@example.com,28,883.21,"24,729.88",20,INR,
+ORD-10051,2026-01-22,Green Doohickey,Widgets,Hyderabad,rohan mehta,rohan.50@example.com,14,2607.95,"36,511.30",10,INR,Repeat customer
+ORD-10090,2026-02-04,Green Doohickey,Widgets,Pune,Priya Sharma,priya.64@example.com,5,1378.39,"6,891.95",10,INR,Contract pricing
+ORD-10022,2026-01-12,Green Doohickey,Widgets,bengaluru,Rohan Mehta,rohan.65@example.com,9,2191.70,"19,725.30",15,INR,
+ORD-10205,14/03/2026,Copper Fitting,Hardware,  Delhi ,Ananya Iyer,ananya.55@example.com,32,2395.90,"76,668.80",5,INR,Priority delivery
+ORD-10181,2026-03-06,Green Doohickey,Widgets,Chennai,Meera Nair,meera.72@example.com,22,2831.93,N/A,10,INR,
+ORD-10092,04 February 2026,Steel Bracket,Hardware,Mumbai,Priya Sharma,priya.22@example.com,31,462.73,"14,344.63",0,INR,
+ORD-10078,31/01/2026,Red Gadget,Gadgets,Pune,Vikram Singh,vikram.65@example.com,14,1239.71,"17,355.94",20,INR,Repeat customer
+ORD-10058,2026-01-24,Cable Set,Accessories,Bengaluru,Priya Sharma,priya.50@example.com,16,3023.94,"48,383.04",,INR,Bulk order
+ORD-10052,2026-01-22,Mini Sensor,Electronics,Chennai,Vikram Singh,missing@,21,209.40,"4,397.40",0,INR,
+ORD-10062,2026-01-25,Smart Device,Electronics,Mumbai,Vikram Singh,vikram.35@example.com,34,2794.29,"95,005.86",,INR,
+ORD-10141,2026-02-21,Green Doohickey,Widgets,pune,Priya Sharma,priya.38@example.com,3,2936.04,"8,808.12",0,INR,
+ORD-10173,2026-03-03,Smart Device,Electronics,PUNE,Ananya Iyer,ananya.36@example.com,40,454.14,"18,165.60",20,INR,Repeat customer
+ORD-10085,02/02/2026,Blue Widget,Widgets,Hyderabad,Priya Sharma,priya.49@example.com,5,3652.67,"18,263.35",20,INR,Bulk order
+ORD-10108,10/02/2026,Cable Set,Accessories,delhi,Priya Sharma,priya.96@example.com,3,2716.53,"8,149.59",5,INR,Priority delivery
+ORD-10014,09/01/2026,Green Doohickey,Widgets,Pune,Meera Nair,meera.98@example.com,29,231.85,"6,723.65",5,INR,Contract pricing
+ORD-10095,2026-02-05,Green Doohickey,Widgets,chennai,Priya Sharma,priya.37@example.com,34,2385.19,"81,096.46",,INR,
+ORD-10032,15/01/2026,Green Doohickey,Widgets,Bengaluru,priya sharma,priya.78@example.com,6,2561.47,"15,368.82",20,INR,
+ORD-10225,2026-03-21,Green Doohickey,Widgets,Bengaluru,Meera Nair,n/a,6,3398.57,"20,391.42",20,INR,Priority delivery
+ORD-10020,11/01/2026,Smart Device,Electronics,Mumbai,Ananya Iyer,ananya.57@example.com,13,620.72,"8,069.36",0,INR,Bulk order
+ORD-10183,07/03/2026,Red Gadget,Gadgets,  Bengaluru ,Meera Nair,meera.99@example.com,18,4159.16,"74,864.88",,INR,
+ORD-10018,2026-01-11,Blue Widget,Widgets,Chennai,ananya iyer,ananya.9@example.com,24,2901.93,"69,646.32",5,INR,Priority delivery
+ORD-10128,2026-02-16,Copper Fitting,Hardware,Delhi,Vikram Singh,vikram.11@example.com,30,461.60,"13,848.00",0,INR,
+ORD-10026,13 January 2026,Blue Widget,Widgets,Pune,ananya iyer,ananya.54@example.com,16,1083.65,"17,338.40",15,INR,
+ORD-10162,28/02/2026,Smart Device,Electronics,DELHI,Meera Nair,meera.41@example.com,36,4013.80,"144,496.80",5,INR,Contract pricing
+ORD-10001,05/01/2026,Copper Fitting,Hardware,DELHI,Ananya Iyer,@example.com,24,3642.75,"87,426.00",,INR,
+ORD-10094,2026-02-05,Steel Bracket,Hardware,CHENNAI,Ananya Iyer,ananya.98@example.com,39,1158.24,"45,171.36",20,INR,Repeat customer
+ORD-10006,2026-01-07,Cable Set,Accessories,  BENGALURU ,Ananya Iyer,ananya.46@example.com,25,548.50,"13,712.50",,INR,Bulk order
+ORD-10080,2026-01-31,Steel Bracket,Hardware,delhi,Rohan Mehta,rohan.33@example.com,23,3932.29,"90,442.67",15,INR,
+ORD-10154,25/02/2026,Blue Widget,Widgets,Mumbai,Vikram Singh,vikram.76@example.com,13,2473.50,"32,155.50",20,INR,Repeat customer
+ORD-10169,2026-03-02,Blue Widget,Widgets,Mumbai,vikram singh,vikram.82@example.com,27,4352.56,"117,519.12",15,INR,
+ORD-10111,11/02/2026,Copper Fitting,Hardware,Chennai,Meera Nair,meera.88@example.com,24,738.13,"17,715.12",0,INR,
+ORD-10121,14 February 2026,Blue Widget,Widgets,CHENNAI,Vikram Singh,vikram.97@example.com,3,3137.68,"9,413.04",,INR,
+ORD-10107,09/02/2026,Copper Fitting,Hardware,HYDERABAD,Vikram Singh,vikram.92@example.com,31,791.38,"24,532.78",5,INR,Repeat customer
+ORD-10201,2026-03-13,Cable Set,Accessories,Chennai,Ananya Iyer,ananya.67@example.com,39,2624.36,"102,350.04",0,INR,
+ORD-10097,2026-02-06,Copper Fitting,Hardware,  Mumbai ,Vikram Singh,vikram.46@example.com,8,2040.73,"16,325.84",15,INR,
+ORD-10059,24/01/2026,Steel Bracket,Hardware,CHENNAI,Meera Nair,meera.90@example.com,9,1945.00,"17,505.00",5,INR,
+ORD-10192,10 March 2026,Green Doohickey,Widgets,mumbai,Meera Nair,meera.97@example.com,28,3219.27,"90,139.56",10,INR,
+ORD-10187,08/03/2026,Copper Fitting,Hardware,delhi,Ananya Iyer,missing@,7,2325.53,"16,278.71",20,INR,
+ORD-10115,12/02/2026,Blue Widget,Widgets,Delhi,Ananya Iyer,ananya.15@example.com,31,3622.53,"112,298.43",0,INR,
+ORD-10197,11/03/2026,Red Gadget,Gadgets,PUNE,Priya Sharma,priya.91@example.com,24,630.06,"15,121.44",10,INR,
+ORD-10027,14/01/2026,Green Doohickey,Widgets,Chennai,Priya Sharma,priya.84@example.com,10,2112.49,"21,124.90",,INR,Repeat customer
+ORD-10042,2026-01-19,Steel Bracket,Hardware,Chennai,Vikram Singh,vikram.94@example.com,26,1328.42,"34,538.92",20,INR,
+ORD-10174,04/03/2026,Green Doohickey,Widgets,Bengaluru,Ananya Iyer,ananya.20@example.com,30,1623.44,"48,703.20",20,INR,
+ORD-10045,2026-01-20,Smart Device,Electronics,MUMBAI,Meera Nair,meera.29@example.com,21,2223.22,"46,687.62",5,INR,
+ORD-10074,29/01/2026,Copper Fitting,Hardware,pune,rohan mehta,rohan.16@example.com,39,2057.16,"80,229.24",0,INR,
+ORD-10101,07 February 2026,Red Gadget,Gadgets,Hyderabad,Vikram Singh,vikram.36@example.com,8,394.36,"3,154.88",10,INR,
+ORD-10038,2026-01-17,Cable Set,Accessories,chennai,Priya Sharma,priya.28@example.com,8,177905.00,"14,232.40",15,INR,Repeat customer
+ORD-10226,21/03/2026,Cable Set,Accessories,Chennai,Priya Sharma,priya.61@example.com,19,3473.50,"65,996.50",,INR,
+ORD-10152,24/02/2026,Red Gadget,Gadgets,Mumbai,Rohan Mehta,missing@,26,219.17,"5,698.42",10,INR,
+ORD-10053,22 January 2026,Steel Bracket,Hardware,BENGALURU,Rohan Mehta,rohan.15@example.com,4,1019.55,"4,078.20",10,INR,
+ORD-10236,2026-03-24,Smart Device,Electronics,DELHI,Rohan Mehta,rohan.63@example.com,26,1195.88,"31,092.88",,INR,Contract pricing
+ORD-10066,2026-01-27,Green Doohickey,Widgets,Mumbai,Ananya Iyer,ananya.33@example.com,17,1074.61,"18,268.37",20,INR,
+ORD-10159,2026-02-27,Copper Fitting,Hardware,delhi,Priya Sharma,priya.64@example.com,5,1348.76,-,,INR,Contract pricing
+ORD-10209,2026-03-15,Cable Set,Accessories,Hyderabad,Priya Sharma,priya.62@example.com,6,2025.61,"12,153.66",20,INR,
+ORD-10179,2026-03-05,Cable Set,Accessories,Mumbai,Ananya Iyer,ananya.64@example.com,40,3892.61,pending,5,INR,
+ORD-10195,2026-03-11,Red Gadget,Gadgets,Pune,Ananya Iyer,ananya.30@example.com,38,3796.98,"144,285.24",0,INR,Priority delivery
+ORD-10064,2026-01-26,Blue Widget,Widgets,bengaluru,Ananya Iyer,ananya.36@example.com,31,2101.77,"65,154.87",0,INR,Repeat customer
+ORD-10220,19 March 2026,Mini Sensor,Electronics,Hyderabad,Meera Nair,meera.99@example.com,10,4464.50,"44,645.00",0,INR,
+ORD-10224,2026-03-20,Green Doohickey,Widgets,Mumbai,Vikram Singh,vikram.9@example.com,31,4489.63,"139,178.53",5,INR,
+ORD-10161,2026-02-27,Red Gadget,Gadgets,Hyderabad,Rohan Mehta,rohan.33@example.com,18,1286.03,"23,148.54",5,INR,
+ORD-10164,2026-02-28,Green Doohickey,Widgets,  Delhi ,Rohan Mehta,rohan.68@example.com,19,712.68,pending,10,INR,Repeat customer
+ORD-10155,25/02/2026,Copper Fitting,Hardware,  Chennai ,Priya Sharma,priya.43@example.com,24,804.66,"19,311.84",15,INR,
+ORD-10229,2026-03-22,Green Doohickey,Widgets,Chennai,Meera Nair,meera.68@example.com,9,4002.59,"36,023.31",0,INR,Priority delivery
+ORD-10041,2026-01-18,Mini Sensor,Electronics,Chennai,Ananya Iyer,ananya.52@example.com,27,1489.63,"40,220.01",10,INR,Priority delivery
+ORD-10221,2026-03-19,Green Doohickey,Widgets,  Mumbai ,Ananya Iyer,ananya.15@example.com,20,1120.46,"22,409.20",10,INR,
+ORD-10151,2026-02-24,Copper Fitting,Hardware,Bengaluru,meera nair,meera.46@example.com,2,3232.12,"6,464.24",0,INR,
+ORD-10077,2026-01-30,Copper Fitting,Hardware,Chennai,Vikram Singh,vikram.42@example.com,10,238.98,"2,389.80",,INR,
+ORD-10029,14 January 2026,Mini Sensor,Electronics,  BENGALURU ,Vikram Singh,vikram.85@example.com,26,2619.56,"68,108.56",15,INR,Contract pricing
+ORD-10180,06 March 2026,Steel Bracket,Hardware,CHENNAI,Rohan Mehta,rohan.48@example.com,4,419.13,"1,676.52",15,INR,
+ORD-10130,17/02/2026,Mini Sensor,Electronics,Hyderabad,Priya Sharma,priya.27@example.com,19,847.73,"16,106.87",20,INR,Priority delivery
+ORD-10089,03/02/2026,Cable Set,Accessories,Chennai,Ananya Iyer,ananya.59@example.com,16,2164.65,"34,634.40",5,INR,
+ORD-10075,30 January 2026,Cable Set,Accessories,Bengaluru,Rohan Mehta,rohan.1@example.com,36,165.77,"5,967.72",5,INR,
+ORD-10030,15/01/2026,Copper Fitting,Hardware,  Chennai ,Ananya Iyer,ananya.64@example.com,37,2194.49,"81,196.13",15,INR,Bulk order
+ORD-10056,23 January 2026,Cable Set,Accessories,Hyderabad,Priya Sharma,priya.50@example.com,34,1528.15,"51,957.10",,INR,Priority delivery
+ORD-10017,2026-01-10,Copper Fitting,Hardware,CHENNAI,Ananya Iyer,ananya.36@example.com,35,3748.81,"131,208.35",0,INR,
+ORD-10016,2026-01-10,Steel Bracket,Hardware,CHENNAI,Vikram Singh,vikram.26@example.com,15,4059.30,"60,889.50",15,INR,
+ORD-10139,20/02/2026,Cable Set,Accessories,Chennai,Priya Sharma,priya.96@example.com,29,1602.17,"46,462.93",20,INR,
+ORD-10048,2026-01-21,Blue Widget,Widgets,Delhi,Meera Nair,meera.10@example.com,30,76345.00,"22,903.50",15,INR,
+ORD-10023,2026-01-12,Red Gadget,Gadgets,BENGALURU,Ananya Iyer,ananya.66@example.com,35,2096.96,"73,393.60",5,INR,Contract pricing
+ORD-10004,2026-01-06,Smart Device,Electronics,Chennai,Meera Nair,meera.79@example.com,30,1475.72,"44,271.60",,INR,
+ORD-10034,2026-01-16,Steel Bracket,Hardware,Chennai,Ananya Iyer,ananya.62@example.com,27,968.20,"26,141.40",,INR,
+ORD-10230,2026-03-22,Blue Widget,Widgets,BENGALURU,Priya Sharma,priya.67@example.com,5,1660.15,"8,300.75",0,INR,Contract pricing
+ORD-10165,2026-03-01,Green Doohickey,Widgets,Mumbai,Meera Nair,meera.45@example.com,37,930.68,"34,435.16",0,INR,Priority delivery
+ORD-10065,2026-01-26,Copper Fitting,Hardware,Hyderabad,Vikram Singh,vikram.97@example.com,14,3562.13,"49,869.82",10,INR,
+ORD-10234,2026-03-24,Blue Widget,Widgets,Hyderabad,Vikram Singh,vikram.30@example.com,32,223.63,"7,156.16",5,INR,
+ORD-10013,09 January 2026,Blue Widget,Widgets,Mumbai,Meera Nair,meera.4@example.com,1,4185.96,"4,185.96",20,INR,Priority delivery
+ORD-10166,2026-03-01,Blue Widget,Widgets,Pune,Priya Sharma,priya.59@example.com,23,2870.79,"66,028.17",,INR,Priority delivery
+ORD-10119,13/02/2026,Green Doohickey,Widgets,Bengaluru,Ananya Iyer,ananya.94@example.com,25,4385.87,"109,646.75",0,INR,
+ORD-10177,05/03/2026,Mini Sensor,Electronics,Mumbai,Meera Nair,meera.36@example.com,9,2663.61,"23,972.49",15,INR,
+ORD-10039,18/01/2026,Steel Bracket,Hardware,DELHI,Meera Nair,meera.33@example.com,36,1406.91,"50,648.76",,INR,
+ORD-10182,2026-03-06,Cable Set,Accessories,CHENNAI,Priya Sharma,priya.72@example.com,29,2302.39,"66,769.31",15,INR,
+ORD-10153,2026-02-25,Smart Device,Electronics,Mumbai,Meera Nair,meera.93@example.com,39,1941.91,"75,734.49",10,INR,Priority delivery
+ORD-10114,2026-02-12,Red Gadget,Gadgets,Mumbai,Priya Sharma,priya.44@example.com,38,1077.12,"40,930.56",20,INR,Contract pricing
+ORD-10113,11/02/2026,Mini Sensor,Electronics,Hyderabad,Rohan Mehta,rohan.41@example.com,6,4337.54,"26,025.24",,INR,
+ORD-10199,2026-03-12,Red Gadget,Gadgets,Bengaluru,Vikram Singh,vikram.60@example.com,27,4009.40,"108,253.80",,INR,
+ORD-10223,2026-03-20,Mini Sensor,Electronics,MUMBAI,Rohan Mehta,rohan.2@example.com,31,2528.34,"78,378.54",10,INR,
+ORD-10127,2026-02-16,Cable Set,Accessories,DELHI,Rohan Mehta,rohan.23@example.com,32,3667.00,"117,344.00",20,INR,
+ORD-10214,2026-03-17,Mini Sensor,Electronics,Mumbai,Vikram Singh,vikram.86@example.com,3,636.42,"1,909.26",20,INR,Repeat customer
+ORD-10116,2026-02-12,Green Doohickey,Widgets,Mumbai,Priya Sharma,priya.85@example.com,40,2732.17,"109,286.80",10,INR,
+ORD-10028,2026-01-14,Cable Set,Accessories,delhi,Meera Nair,meera.21@example.com,28,1516.64,"42,465.92",15,INR,
+ORD-10190,09/03/2026,Smart Device,Electronics,Hyderabad,Priya Sharma,priya.36@example.com,37,3538.10,"130,909.70",,INR,
+ORD-10088,2026-02-03,Green Doohickey,Widgets,Hyderabad,Meera Nair,not-an-email,28,2049.57,"57,387.96",0,INR,
+ORD-10044,2026-01-19,Cable Set,Accessories,Pune,Rohan Mehta,rohan.58@example.com,11,3140.25,"34,542.75",,INR,
+ORD-10076,2026-01-30,Green Doohickey,Widgets,Pune,Priya Sharma,priya.1@example.com,5,325.10,"1,625.50",10,INR,
+ORD-10040,2026-01-18,Steel Bracket,Hardware,Delhi,Priya Sharma,priya.22@example.com,25,1344.47,"33,611.75",20,INR,Bulk order
+ORD-10215,2026-03-17,Copper Fitting,Hardware,Pune,Vikram Singh,vikram.25@example.com,34,3121.47,"106,129.98",0,INR,
+ORD-10210,16/03/2026,Copper Fitting,Hardware,Mumbai,Priya Sharma,priya.29@example.com,23,3255.99,"74,887.77",20,INR,
+ORD-10123,2026-02-15,Smart Device,Electronics,  DELHI ,Ananya Iyer,ananya.29@example.com,11,3998.42,"43,982.62",,INR,
+ORD-10011,2026-01-08,Steel Bracket,Hardware,Delhi,Vikram Singh,vikram.55@example.com,5,3904.14,"19,520.70",,INR,
+ORD-10084,2026-02-02,Cable Set,Accessories,Delhi,Ananya Iyer,ananya.57@example.com,30,2347.90,"70,437.00",0,INR,Contract pricing
+ORD-10147,2026-02-23,Copper Fitting,Hardware,bengaluru,Ananya Iyer,ananya.58@example.com,20,4389.43,"87,788.60",10,INR,
+ORD-10149,2026-02-23,Copper Fitting,Hardware,Pune,Rohan Mehta,rohan.47@example.com,29,3049.48,"88,434.92",15,INR,Contract pricing
+ORD-10086,2026-02-02,Steel Bracket,Hardware,  DELHI ,Rohan Mehta,rohan.81@example.com,37,941.60,"34,839.20",5,INR,
+ORD-10138,2026-02-20,Mini Sensor,Electronics,mumbai,Ananya Iyer,ananya.49@example.com,26,1079.29,"28,061.54",5,INR,
+ORD-10135,19/02/2026,Mini Sensor,Electronics,Mumbai,Vikram Singh,vikram.79@example.com,40,915.78,"36,631.20",15,INR,
+ORD-10218,18 March 2026,Copper Fitting,Hardware,Bengaluru,Vikram Singh,vikram.62@example.com,38,3734.73,pending,0,INR,Priority delivery
+ORD-10176,04/03/2026,Smart Device,Electronics,Delhi,Ananya Iyer,ananya.56@example.com,29,4011.89,"116,344.81",10,INR,
+ORD-10015,10/01/2026,Cable Set,Accessories,Chennai,rohan mehta,rohan.59@example.com,34,4386.28,"149,133.52",0,INR,
+ORD-10106,2026-02-09,Green Doohickey,Widgets,Chennai,Vikram Singh,vikram.6@example.com,29,1340.99,"38,888.71",15,INR,
+ORD-10167,2026-03-01,Blue Widget,Widgets,HYDERABAD,Meera Nair,meera.77@example.com,1,2110.82,"2,110.82",5,INR,Contract pricing
+ORD-10196,2026-03-11,Steel Bracket,Hardware,Delhi,Vikram Singh,vikram.41@example.com,12,521.73,"6,260.76",,INR,
+ORD-10144,2026-02-22,Red Gadget,Gadgets,Pune,Priya Sharma,priya.23@example.com,10,1883.88,"18,838.80",0,INR,Contract pricing
+ORD-10132,18 February 2026,Cable Set,Accessories,Pune,Rohan Mehta,rohan.70@example.com,23,355.95,"8,186.85",15,INR,
+ORD-10098,06 February 2026,Smart Device,Electronics,Hyderabad,Ananya Iyer,ananya.5@example.com,7,3750.45,"26,253.15",5,INR,Repeat customer
+ORD-10170,2026-03-02,Smart Device,Electronics,HYDERABAD,Priya Sharma,priya.13@example.com,37,138303.00,"51,172.11",15,INR,
+ORD-10063,2026-01-26,Red Gadget,Gadgets,Delhi,Ananya Iyer,@example.com,37,1869.50,"69,171.50",,INR,
+ORD-10050,2026-01-21,Red Gadget,Gadgets,bengaluru,Vikram Singh,vikram.86@example.com,35,791.26,"27,694.10",5,INR,Repeat customer
+ORD-10124,15/02/2026,Steel Bracket,Hardware,Delhi,Meera Nair,missing@,36,3293.58,"118,568.88",0,INR,
+ORD-10007,2026-01-07,Blue Widget,Widgets,Delhi,Rohan Mehta,rohan.72@example.com,33,1278.71,"42,197.43",5,INR,
+ORD-10208,2026-03-15,Cable Set,Accessories,PUNE,Meera Nair,meera.88@example.com,28,1815.22,"50,826.16",20,INR,
+ORD-10092,04 February 2026,Steel Bracket,Hardware,Mumbai,Priya Sharma,priya.22@example.com,31,462.73,"14,344.63",0,INR,
+ORD-10047,20/01/2026,Copper Fitting,Hardware,Pune,Vikram Singh,n/a,1,672.07,N/A,20,INR,
+ORD-10175,2026-03-04,Blue Widget,Widgets,Hyderabad,Ananya Iyer,ananya.34@example.com,39,2786.81,TBD,15,INR,Contract pricing
+ORD-10186,2026-03-08,Copper Fitting,Hardware,Delhi,Priya Sharma,priya.54@example.com,2,3222.65,"6,445.30",5,INR,Bulk order
+ORD-10031,15 January 2026,Cable Set,Accessories,Bengaluru,Priya Sharma,priya.17@example.com,9,1926.85,TBD,,INR,
+ORD-10185,2026-03-07,Cable Set,Accessories,Chennai,ananya iyer,ananya.33@example.com,9,2667.74,"24,009.66",0,INR,
+ORD-10096,06/02/2026,Copper Fitting,Hardware,Delhi,Vikram Singh,vikram.97@example.com,3,890.82,"2,672.46",5,INR,Repeat customer
+ORD-10087,2026-02-03,Steel Bracket,Hardware,bengaluru,Priya Sharma,priya.59@example.com,1,2769.33,"2,769.33",0,INR,Contract pricing
+ORD-10046,20/01/2026,Red Gadget,Gadgets,  MUMBAI ,Priya Sharma,priya.63@example.com,29,1857.03,-,5,INR,
+ORD-10117,13/02/2026,Steel Bracket,Hardware,Mumbai,Priya Sharma,priya.78@example.com,1,2435.73,"2,435.73",0,INR,Repeat customer
+ORD-10178,05/03/2026,Blue Widget,Widgets,CHENNAI,Meera Nair,meera.58@example.com,34,2000.61,"68,020.74",20,INR,
+ORD-10227,2026-03-21,Blue Widget,Widgets,Bengaluru,Rohan Mehta,n/a,13,3729.02,"48,477.26",,INR,Contract pricing
+ORD-10198,12/03/2026,Steel Bracket,Hardware,CHENNAI,Meera Nair,meera.80@example.com,29,2443.66,"70,866.14",0,INR,
+ORD-10212,16/03/2026,Green Doohickey,Widgets,Bengaluru,Priya Sharma,priya.73@example.com,23,1995.82,"45,903.86",5,INR,Priority delivery
+ORD-10206,2026-03-14,Green Doohickey,Widgets,Pune,Ananya Iyer,ananya.12@example.com,15,2976.11,"44,641.65",0,INR,Contract pricing
+ORD-10002,2026-01-05,Mini Sensor,Electronics,Pune,Vikram Singh,vikram.13@example.com,29,4046.28,"117,342.12",5,INR,
+ORD-10131,2026-02-17,Copper Fitting,Hardware,Hyderabad,Meera Nair,meera.83@example.com,28,3264.49,"91,405.72",,INR,Bulk order
+ORD-10232,2026-03-23,Blue Widget,Widgets,Mumbai,Meera Nair,meera.63@example.com,8,604.41,"4,835.28",10,INR,Bulk order
+ORD-10136,19 February 2026,Mini Sensor,Electronics,bengaluru,Meera Nair,meera.34@example.com,30,614.09,"18,422.70",0,INR,
+ORD-10071,2026-01-28,Cable Set,Accessories,Pune,Priya Sharma,priya.36@example.com,13,3991.19,"51,885.47",5,INR,
+ORD-10211,16/03/2026,Blue Widget,Widgets,HYDERABAD,Meera Nair,meera.1@example.com,27,1132.95,"30,589.65",20,INR,Bulk order
+ORD-10140,2026-02-20,Mini Sensor,Electronics,pune,Priya Sharma,priya.23@example.com,34,1958.84,"66,600.56",5,INR,
+ORD-10202,13 March 2026,Steel Bracket,Hardware,DELHI,Meera Nair,meera.30@example.com,27,2274.70,"61,416.90",10,INR,
+ORD-10157,26/02/2026,Mini Sensor,Electronics,Delhi,Priya Sharma,priya.14@example.com,27,570.36,"15,399.72",0,INR,Bulk order
+ORD-10129,2026-02-17,Steel Bracket,Hardware,Delhi,Meera Nair,meera.54@example.com,9,827.86,"7,450.74",5,INR,
+ORD-10189,2026-03-09,Green Doohickey,Widgets,CHENNAI,Vikram Singh,vikram.60@example.com,40,438.06,"17,522.40",0,INR,Repeat customer
+ORD-10118,2026-02-13,Mini Sensor,Electronics,Hyderabad,Vikram Singh,vikram.47@example.com,39,3139.15,TBD,0,INR,Bulk order
+ORD-10105,09 February 2026,Mini Sensor,Electronics,  Mumbai ,Meera Nair,meera.39@example.com,7,2813.17,"19,692.19",5,INR,
+ORD-10069,28 January 2026,Copper Fitting,Hardware,Bengaluru,Rohan Mehta,rohan.71@example.com,10,1593.68,"15,936.80",10,INR,
+ORD-10216,18 March 2026,Mini Sensor,Electronics,bengaluru,meera nair,meera.97@example.com,32,1886.31,"60,361.92",,INR,
+ORD-10079,2026-01-31,Blue Widget,Widgets,Hyderabad,Priya Sharma,priya.8@example.com,7,266.06,"1,862.42",,INR,
+ORD-10142,2026-02-21,Smart Device,Electronics,Bengaluru,Meera Nair,meera.9@example.com,36,3962.07,"142,634.52",20,INR,Repeat customer
+ORD-10112,11/02/2026,Copper Fitting,Hardware,Bengaluru,rohan mehta,missing@,38,559.37,"21,256.06",0,INR,
+ORD-10237,2026-03-25,Steel Bracket,Hardware,BENGALURU,Meera Nair,meera.84@example.com,25,2363.63,"59,090.75",15,INR,
+ORD-10146,2026-02-22,Copper Fitting,Hardware,CHENNAI,Rohan Mehta,rohan.71@example.com,18,2386.13,"42,950.34",20,INR,
+ORD-10124,15/02/2026,Steel Bracket,Hardware,Delhi,Meera Nair,missing@,36,3293.58,"118,568.88",0,INR,
+ORD-10008,2026-01-07,Green Doohickey,Widgets,Chennai,Ananya Iyer,ananya.61@example.com,25,1192.53,-,,INR,Bulk order
+ORD-10061,25/01/2026,Red Gadget,Gadgets,Mumbai,Rohan Mehta,rohan.40@example.com,5,1458.22,"7,291.10",5,INR,
+ORD-10019,2026-01-11,Mini Sensor,Electronics,Chennai,Meera Nair,meera.56@example.com,39,3677.74,"143,431.86",,INR,Priority delivery
+ORD-10054,23/01/2026,Green Doohickey,Widgets,CHENNAI,Meera Nair,meera.2@example.com,6,2162.04,N/A,,INR,
+ORD-10222,2026-03-20,Red Gadget,Gadgets,HYDERABAD,Vikram Singh,vikram.25@example.com,9,208.75,"1,878.75",10,INR,Bulk order
+ORD-10235,2026-03-24,Blue Widget,Widgets,Delhi,Ananya Iyer,ananya.92@example.com,22,617.93,"13,594.46",20,INR,Bulk order
+ORD-10188,2026-03-08,Cable Set,Accessories,Bengaluru,Priya Sharma,priya.14@example.com,23,2949.06,"67,828.38",5,INR,Bulk order
+ORD-10228,2026-03-22,Mini Sensor,Electronics,Chennai,Meera Nair,meera.86@example.com,4,3898.61,"15,594.44",0,INR,
+ORD-10025,13/01/2026,Green Doohickey,Widgets,  Mumbai ,Ananya Iyer,ananya.15@example.com,11,3169.91,"34,869.01",,INR,Priority delivery
+ORD-10133,2026-02-18,Blue Widget,Widgets,MUMBAI,Rohan Mehta,rohan.55@example.com,10,1838.33,"18,383.30",0,INR,
+ORD-10067,2026-01-27,Smart Device,Electronics,Pune,Meera Nair,meera.34@example.com,18,3281.48,TBD,,INR,
+ORD-10049,21/01/2026,Cable Set,Accessories,Delhi,Priya Sharma,priya.4@example.com,34,3994.66,"135,818.44",20,INR,
+ORD-10191,2026-03-09,Blue Widget,Widgets,Chennai,Rohan Mehta,rohan.72@example.com,5,3939.75,"19,698.75",,INR,
+ORD-10043,2026-01-19,Smart Device,Electronics,  Chennai ,Priya Sharma,priya.16@example.com,19,690.73,"13,123.87",0,INR,
+ORD-10160,27 February 2026,Copper Fitting,Hardware,Chennai,Ananya Iyer,ananya.91@example.com,34,3840.93,"130,591.62",15,INR,
+ORD-10184,07 March 2026,Copper Fitting,Hardware,DELHI,Rohan Mehta,rohan.58@example.com,7,1537.81,"10,764.67",,INR,
+ORD-10137,19/02/2026,Steel Bracket,Hardware,Chennai,Rohan Mehta,rohan.79@example.com,3,3592.53,"10,777.59",10,INR,Repeat customer
+ORD-10033,16/01/2026,Cable Set,Accessories,Bengaluru,Priya Sharma,missing@,2,4340.78,"8,681.56",10,INR,
+ORD-10207,15 March 2026,Steel Bracket,Hardware,Chennai,Vikram Singh,vikram.71@example.com,28,1991.73,"55,768.44",15,INR,Contract pricing
+ORD-10145,2026-02-22,Steel Bracket,Hardware,Pune,Priya Sharma,priya.28@example.com,27,471.72,"12,736.44",10,INR,Contract pricing
+ORD-10000,2026-01-05,Red Gadget,Gadgets,Hyderabad,Meera Nair,meera.51@example.com,34,4238.74,"144,117.16",10,INR,
+ORD-10172,03/03/2026,Steel Bracket,Hardware,Delhi,Priya Sharma,priya.83@example.com,33,257.57,"8,499.81",10,INR,Contract pricing
+ORD-10041,2026-01-18,Mini Sensor,Electronics,Chennai,Ananya Iyer,ananya.52@example.com,27,1489.63,"40,220.01",10,INR,Priority delivery
+ORD-10125,2026-02-15,Smart Device,Electronics,MUMBAI,Ananya Iyer,ananya.68@example.com,11,3778.78,"41,566.58",5,INR,
+ORD-10143,2026-02-21,Cable Set,Accessories,pune,Priya Sharma,priya.63@example.com,7,4326.74,"30,287.18",,INR,Priority delivery
+ORD-10057,24 January 2026,Cable Set,Accessories,Delhi,Priya Sharma,priya.21@example.com,37,374.17,"13,844.29",0,INR,
+ORD-10081,2026-02-01,Cable Set,Accessories,HYDERABAD,Priya Sharma,priya.77@example.com,24,2924.69,"70,192.56",0,INR,
+ORD-10024,2026-01-13,Blue Widget,Widgets,Bengaluru,Rohan Mehta,rohan.98@example.com,28,2866.22,"80,254.16",15,INR,
+ORD-10122,14 February 2026,Blue Widget,Widgets,Delhi,Ananya Iyer,ananya.94@example.com,29,1549.32,"44,930.28",15,INR,Repeat customer
+ORD-10083,2026-02-01,Smart Device,Electronics,Delhi,ananya iyer,ananya.6@example.com,13,1879.63,"24,435.19",,INR,
+ORD-10129,2026-02-17,Steel Bracket,Hardware,Delhi,Meera Nair,meera.54@example.com,9,827.86,"7,450.74",5,INR,
+ORD-10060,2026-01-25,Smart Device,Electronics,Chennai,Vikram Singh,vikram.99@example.com,15,1677.80,"25,167.00",20,INR,Bulk order
+ORD-10194,2026-03-10,Smart Device,Electronics,Bengaluru,Priya Sharma,priya.83@example.com,2,505.24,"1,010.48",15,INR,Repeat customer
+ORD-10036,17/01/2026,Blue Widget,Widgets,DELHI,Priya Sharma,priya.74@example.com,5,2441.60,"12,208.00",0,INR,
+ORD-10100,2026-02-07,Blue Widget,Widgets,Chennai,Priya Sharma,priya.52@example.com,26,3457.99,"89,907.74",20,INR,Repeat customer
+ORD-10168,2026-03-02,Smart Device,Electronics,Hyderabad,Vikram Singh,vikram.56@example.com,21,4230.32,"88,836.72",20,INR,
+ORD-10091,2026-02-04,Red Gadget,Gadgets,Delhi,Meera Nair,meera.79@example.com,17,1280.62,"21,770.54",5,INR,Priority delivery
+ORD-10110,2026-02-10,Mini Sensor,Electronics,Pune,ananya iyer,ananya.29@example.com,25,4144.54,"103,613.50",,INR,
+ORD-10055,23/01/2026,Smart Device,Electronics,Hyderabad,Vikram Singh,vikram.56@example.com,39,3883.14,"151,442.46",20,INR,
+ORD-10213,2026-03-17,Copper Fitting,Hardware,hyderabad,Vikram Singh,vikram.15@example.com,17,814.82,"13,851.94",20,INR,Bulk order
+ORD-10076,2026-01-30,Green Doohickey,Widgets,Pune,Priya Sharma,priya.1@example.com,5,325.10,"1,625.50",10,INR,
+ORD-10148,2026-02-23,Mini Sensor,Electronics,  Chennai ,Priya Sharma,priya.20@example.com,29,842.08,"24,420.32",10,INR,
+ORD-10231,2026-03-23,Red Gadget,Gadgets,Pune,Priya Sharma,priya.91@example.com,26,2021.22,-,0,INR,Bulk order
+ORD-10051,2026-01-22,Green Doohickey,Widgets,Hyderabad,rohan mehta,rohan.50@example.com,14,2607.95,"36,511.30",10,INR,Repeat customer
+ORD-10037,17 January 2026,Mini Sensor,Electronics,mumbai,Vikram Singh,vikram.86@example.com,20,659.65,"13,193.00",5,INR,
+ORD-10035,2026-01-16,Cable Set,Accessories,Mumbai,Rohan Mehta,rohan.5@example.com,38,2423.38,TBD,5,INR,
+ORD-10150,2026-02-24,Mini Sensor,Electronics,BENGALURU,ananya iyer,ananya.92@example.com,5,565.06,"2,825.30",20,INR,Bulk order
+ORD-10073,2026-01-29,Green Doohickey,Widgets,Hyderabad,Ananya Iyer,ananya.45@example.com,19,1247.92,"23,710.48",,INR,Priority delivery
+ORD-10068,27 January 2026,Blue Widget,Widgets,Mumbai,Meera Nair,meera.78@example.com,33,611.20,"20,169.60",,INR,Repeat customer
+ORD-10134,18/02/2026,Mini Sensor,Electronics,Chennai,Meera Nair,meera.19@example.com,1,228.52,228.52,,INR,Priority delivery
+ORD-10217,2026-03-18,Cable Set,Accessories,Mumbai,Vikram Singh,vikram.13@example.com,10,560.81,"5,608.10",10,INR,Priority delivery
+ORD-10005,2026-01-06,Steel Bracket,Hardware,chennai,Meera Nair,meera.46@example.com,2,3735.04,"7,470.08",,INR,
+ORD-10026,13 January 2026,Blue Widget,Widgets,Pune,ananya iyer,ananya.54@example.com,16,1083.65,"17,338.40",15,INR,
+ORD-10238,2026-03-25,Cable Set,Accessories,Pune,Ananya Iyer,ananya.32@example.com,16,3189.75,"51,036.00",10,INR,
+ORD-10149,2026-02-23,Copper Fitting,Hardware,Pune,Rohan Mehta,rohan.47@example.com,29,3049.48,"88,434.92",15,INR,Contract pricing

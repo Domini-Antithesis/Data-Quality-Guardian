@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Quality Agent</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧹</text></svg>">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">🧹</span>
+      <div>
+        <div class="brand-title">Data Quality Agent</div>
+        <div class="brand-sub">Find what is wrong with your data → see the AI's suggested fix → approve what you want → download the clean file</div>
+      </div>
+    </div>
+    <div class="status-pills" id="status-pills"></div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab" data-tab="setup">1 · Setup</button>
+    <button class="tab active" data-tab="analyze">2 · Upload data</button>
+    <button class="tab" data-tab="review">3 · Review &amp; fix</button>
+    <button class="tab" data-tab="history">4 · History</button>
+  </nav>
+
+  <main class="page">
+
+    <!-- ===================== SETUP ===================== -->
+    <section class="view" id="view-setup" hidden>
+      <div class="intro">
+        <h1>Setup</h1>
+        <p>Choose which AI suggests the fixes, and how strict the checks should be. You can skip this
+           entirely and use Demo mode, which needs no key and uses built-in expert rules.</p>
+      </div>
+
+      <div class="card">
+        <h2>A · AI provider</h2>
+        <p class="muted">The AI never writes code and never touches your file. It reads each problem and
+           picks one fix from a fixed menu, then explains why. You approve or change every choice.</p>
+        <div class="grid-2">
+          <label>Provider
+            <select id="llm_provider">
+              <option value="groq">Groq (free tier, recommended)</option>
+              <option value="gemini">Google Gemini (free tier)</option>
+              <option value="openai">OpenAI</option>
+              <option value="ollama">Ollama (local, private)</option>
+              <option value="mock">Demo mode (no key, built-in rules)</option>
+            </select>
+          </label>
+          <label>Model <span class="hint">(leave blank for the default)</span>
+            <input id="llm_model" placeholder="default">
+          </label>
+        </div>
+        <div id="key-groq" class="key-row">
+          <label>Groq API key <span class="hint">free at <a href="https://console.groq.com/keys" target="_blank" rel="noopener">console.groq.com/keys</a></span>
+            <input id="groq_api_key" type="password" autocomplete="off" placeholder="gsk_...">
+          </label>
+        </div>
+        <div id="key-gemini" class="key-row" hidden>
+          <label>Google API key <span class="hint">free at <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener">aistudio.google.com</a></span>
+            <input id="google_api_key" type="password" autocomplete="off" placeholder="AIza...">
+          </label>
+        </div>
+        <div id="key-openai" class="key-row" hidden>
+          <label>OpenAI API key <input id="openai_api_key" type="password" autocomplete="off" placeholder="sk-..."></label>
+        </div>
+        <div id="key-ollama" class="key-row" hidden>
+          <label>Ollama URL <span class="hint">install <a href="https://ollama.com" target="_blank" rel="noopener">ollama.com</a>, then <code>ollama pull llama3.1</code></span>
+            <input id="ollama_base_url" placeholder="http://localhost:11434">
+          </label>
+        </div>
+        <div class="actions">
+          <button class="btn primary" id="btn-save-llm">Save</button>
+          <button class="btn" id="btn-test-llm">Test connection</button>
+          <span class="result" id="res-llm"></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>B · How strict should the checks be?</h2>
+        <div class="grid-3">
+          <label>Report a column as incomplete above
+            <input id="missing_warn_pct" type="number" min="0" max="100" step="1" value="5"> % blank
+            <span class="hint">Below this, a few blanks are ignored.</span>
+          </label>
+          <label>Treat as critical above
+            <input id="missing_critical_pct" type="number" min="0" max="100" step="1" value="40"> % blank
+          </label>
+          <label>Outlier sensitivity
+            <input id="outlier_iqr_multiplier" type="number" min="1" max="10" step="0.5" value="3">
+            <span class="hint">Lower finds more extremes. 1.5 is aggressive, 3 is conservative.</span>
+          </label>
+        </div>
+        <div class="actions">
+          <button class="btn primary" id="btn-save-rules">Save</button>
+          <span class="result" id="res-rules"></span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>C · LangSmith tracing <span class="optional">optional</span></h2>
+        <p class="muted">See every step of the workflow at <a href="https://smith.langchain.com" target="_blank" rel="noopener">smith.langchain.com</a> (free tier).</p>
+        <div class="grid-2">
+          <label class="check"><input id="langchain_tracing_v2" type="checkbox"> Enable tracing</label>
+          <label>Project name <input id="langchain_project" placeholder="data-quality-agent"></label>
+          <label>LangSmith API key <input id="langchain_api_key" type="password" autocomplete="off" placeholder="lsv2_..."></label>
+        </div>
+        <div class="actions">
+          <button class="btn primary" id="btn-save-tracing">Save</button>
+          <span class="result" id="res-tracing"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ANALYZE ===================== -->
+    <section class="view" id="view-analyze">
+      <div class="intro">
+        <h1>Upload your data</h1>
+        <p>Drop in a CSV or Excel file. Nine checks run over it looking for blanks, duplicates,
+           mixed types, inconsistent dates and casing, stray spaces, extreme values, invalid emails
+           and columns that never change. Nothing is modified until you approve it.</p>
+      </div>
+      <div class="notice" id="setup-notice" hidden>
+        <strong>First time here?</strong> No AI provider is configured yet. Go to
+        <button class="linkish" data-goto="setup">Setup</button> to add a free Groq key, or switch to
+        Demo mode to use the built-in rules with no key.
+      </div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>📄 Your file</h2>
+          <p class="muted">CSV, TSV or Excel, up to 25 MB and 200,000 rows. Everything is read as text
+             first, so nothing is silently "fixed" before the checks run.</p>
+          <input type="file" id="file-input" accept=".csv,.tsv,.txt,.xlsx,.xlsm">
+          <div class="actions">
+            <button class="btn primary" id="btn-upload" disabled>Check this file</button>
+          </div>
+        </div>
+        <div class="card">
+          <h2>🧪 Try a sample</h2>
+          <p class="muted">Two ready-made datasets. The messy one has eleven planted problems.
+             The clean one should come back with nothing wrong.</p>
+          <div class="actions" id="sample-buttons"></div>
+        </div>
+      </div>
+
+      <div class="card" id="progress-card" hidden>
+        <h2 id="progress-title">Checking your data…</h2>
+        <ol class="steps" id="steps">
+          <li data-step="load"><span class="dot"></span><div><strong>Load</strong><span>read every value as text</span></div></li>
+          <li data-step="profile"><span class="dot"></span><div><strong>Profile Agent</strong><span>shape, types, samples</span></div></li>
+          <li data-step="detect"><span class="dot"></span><div><strong>Detector Agent</strong><span>nine quality checks</span></div></li>
+          <li data-step="score"><span class="dot"></span><div><strong>Validator</strong><span>quality score before</span></div></li>
+          <li data-step="advise"><span class="dot"></span><div><strong>Fixer Agent</strong><span>AI recommends a fix each</span></div></li>
+          <li data-step="approve"><span class="dot"></span><div><strong>You</strong><span>approve what to apply</span></div></li>
+        </ol>
+        <div class="progress"><div class="bar" id="progress-bar"></div></div>
+        <p class="muted" id="progress-text"></p>
+        <div id="progress-error" class="error" hidden></div>
+      </div>
+    </section>
+
+    <!-- ===================== REVIEW ===================== -->
+    <section class="view" id="view-review" hidden>
+      <div id="review-empty" class="intro">
+        <h1>Review &amp; fix</h1>
+        <p>Nothing to review yet. Upload a file on the previous tab, or open a past run from History.</p>
+      </div>
+
+      <div id="review-body" hidden>
+        <div class="intro row">
+          <div>
+            <h1 id="rv-title">Run</h1>
+            <p class="muted" id="rv-meta"></p>
+          </div>
+          <div class="actions" id="rv-top-actions"></div>
+        </div>
+
+        <div class="kpis" id="rv-kpis"></div>
+
+        <div class="card" id="rv-dimensions-card">
+          <h2>Where the quality is lost</h2>
+          <div id="rv-dimensions"></div>
+        </div>
+
+        <div class="card" id="rv-approve-card">
+          <div class="row">
+            <div>
+              <h2>Proposed fixes</h2>
+              <p class="muted">Each problem below has one recommended fix and the reason for it. Change any
+                 of them, untick the ones you do not want, then apply. Your file is never modified until
+                 you press Apply.</p>
+            </div>
+            <div class="actions">
+              <button class="btn small" id="btn-select-all">Approve all</button>
+              <button class="btn small" id="btn-select-none">Approve none</button>
+              <button class="btn small" id="btn-select-safe">Only non-destructive</button>
+            </div>
+          </div>
+          <div id="rv-issues"></div>
+          <div class="apply-bar">
+            <div>
+              <strong id="rv-approved-count">0 fixes selected</strong>
+              <span class="hint" id="rv-destructive-note"></span>
+            </div>
+            <button class="btn primary" id="btn-apply">Apply approved fixes</button>
+          </div>
+          <div id="rv-apply-error" class="error" hidden></div>
+        </div>
+
+        <div class="card" id="rv-result-card" hidden>
+          <h2>What changed</h2>
+          <div id="rv-applied"></div>
+        </div>
+
+        <div class="card" id="rv-remaining-card" hidden>
+          <h2>Still outstanding after the fixes</h2>
+          <p class="muted">The same nine checks were run again on the cleaned data. Anything listed here
+             was not solved, either because you left it alone or because the fix did not cover it.</p>
+          <div id="rv-remaining"></div>
+        </div>
+
+        <div class="card">
+          <div class="row">
+            <h2>Your data</h2>
+            <div class="chips" id="rv-preview-toggle">
+              <button class="chip active" data-which="original">Original</button>
+              <button class="chip" data-which="cleaned" id="chip-cleaned" disabled>Cleaned</button>
+            </div>
+          </div>
+          <div class="table-wrap"><table class="table compact" id="rv-preview"></table></div>
+          <p class="muted" id="rv-preview-note"></p>
+        </div>
+
+        <div class="card">
+          <h2>Audit trail</h2>
+          <p class="muted">Everything that happened, in order, and who did it. Download it as a report for
+             your governance records.</p>
+          <div class="table-wrap"><table class="table compact" id="rv-audit"></table></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HISTORY ===================== -->
+    <section class="view" id="view-history" hidden>
+      <div class="intro">
+        <h1>History</h1>
+        <p>Every dataset you have checked, and how much its quality improved.</p>
+      </div>
+      <div class="kpis" id="h-kpis"></div>
+      <div class="card">
+        <div class="table-wrap">
+          <table class="table" id="h-runs">
+            <thead><tr><th>#</th><th>File</th><th>When</th><th>Rows</th><th>Issues</th><th>Score</th><th>Status</th><th></th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    Built with Python · LangGraph · pandas · FastAPI. Capstone #14 from the GenAI / Agentic AI programme.
+    <a href="/api/docs" target="_blank" rel="noopener">API docs</a>
+  </footer>
+
+  <div class="toast" id="toast" hidden></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

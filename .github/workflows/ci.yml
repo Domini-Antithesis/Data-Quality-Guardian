@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install package with dev dependencies
+        run: pip install -e ".[dev]"
+      - name: Ruff (lint + format check)
+        run: |
+          ruff check src/ scripts/ tests/
+          ruff format --check src/ scripts/ tests/
+      # The tests force LLM_PROVIDER=mock, so no API key is needed or read
+      # here. Live providers are never exercised in CI.
+      - name: pytest
+        run: pytest tests/ -q
+      - name: Detectors still find every planted flaw in the bundled samples
+        run: |
+          dq-agent scan src/dq_agent/resources/samples/messy_sales_data.csv | tee scan.txt
+          grep -q "11 issues" scan.txt
+          dq-agent scan src/dq_agent/resources/samples/clean_orders.csv | grep -q "No issues found"
+      - name: The built-in rules still raise the score end to end
+        run: dq-agent clean src/dq_agent/resources/samples/messy_sales_data.csv --provider mock | grep -q "Quality score 71.0 -> 86.8"
+      - name: Frontend syntax check
+        run: node --check src/dq_agent/web/app.js
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build image
+        run: docker build -t data-quality-agent:ci .
+      - name: Smoke-test the container
+        run: |
+          docker run -d --name smoke -p 8100:8100 -e LLM_PROVIDER=mock data-quality-agent:ci
+          for i in $(seq 1 30); do
+            if curl -fs http://127.0.0.1:8100/api/health; then echo; echo "healthy"; break; fi
+            sleep 1
+          done
+          curl -fs -X POST http://127.0.0.1:8100/api/samples/messy_sales_data.csv/analyze
+          sleep 5
+          # The run must stop for approval, never apply anything on its own.
+          curl -fs http://127.0.0.1:8100/api/runs/1 | grep -q '"status":"awaiting_approval"'
+          docker rm -f smoke

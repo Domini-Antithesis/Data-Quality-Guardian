@@ -1,0 +1,19 @@
+services:
+  app:
+    build: .
+    container_name: data-quality-agent
+    # Bound to 127.0.0.1 so the app is reachable only from this machine.
+    ports:
+      - "127.0.0.1:${APP_PORT:-8401}:8100"
+    # .env is optional: everything can also be entered on the Settings page,
+    # which saves to data/settings.json inside the mounted volume below.
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      DATA_DIR: /app/data
+      APP_HOST: 0.0.0.0
+      APP_PORT: 8100
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
