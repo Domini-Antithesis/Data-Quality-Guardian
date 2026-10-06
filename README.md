@@ -2,7 +2,7 @@
 
 **Upload a messy spreadsheet. See exactly what is wrong with it, read the AI's suggested fix and its reasoning for each problem, approve the ones you want, and download the cleaned file with a full audit trail.**
 
-Capstone project **#14 — Data Quality Guardian** (Data Engineering, level: Advanced) from the GenAI / Agentic AI capstone programme. Built with Python, LangGraph, pandas and FastAPI, with a plain HTML frontend that needs no build step.
+Built with Python, LangGraph, pandas and FastAPI, with a plain HTML frontend that needs no build step.
 
 <p align="left">
   <img alt="Python" src="https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white">
@@ -33,7 +33,6 @@ Capstone project **#14 — Data Quality Guardian** (Data Engineering, level: Adv
 - [Configuration reference](#configuration-reference)
 - [The JSON API](#the-json-api)
 - [Project structure](#project-structure)
-- [How it maps to the capstone brief](#how-it-maps-to-the-capstone-brief)
 - [Testing and what was verified](#testing-and-what-was-verified)
 - [Troubleshooting](#troubleshooting)
 - [Security notes](#security-notes)
@@ -320,20 +319,6 @@ Data-Quality-Guardian/
 └── tests/                          # 92 pytest tests, all offline
 ```
 
-## How it maps to the capstone brief
-
-| The brief says | This project does | Why |
-|---|---|---|
-| Input: CSV/Parquet/DB table + schema YAML + DQ rules | CSV, TSV and Excel upload; rules are settings with sensible defaults | A beginner should not have to write a schema file to get a first answer. Thresholds are adjustable in the UI |
-| Detector Agent (LangGraph): scan, identify all issues | Nine deterministic detectors as a LangGraph node | Determinism is what makes the before/after score meaningful |
-| RAG: ChromaDB for DQ policies and fix strategies | A fixed, documented fix menu with plain-language explanations | The "corpus" here is eighteen known strategies. A vector store over eighteen fixed items adds a dependency and no accuracy. See ARCHITECTURE.md |
-| Fixer Agent: LLM picks the best fix, generates a code patch | LLM picks from the allowed menu and explains; deterministic pandas applies it | An LLM generating code that runs against your data is the risk this design exists to remove |
-| Executor: pandas applies fixes | Exactly that, one tested function per strategy | |
-| Validator: Great Expectations rescan, DQ score | The same nine detectors re-run, plus a 0-100 score in four dimensions | One rule engine, used for both passes, so "before" and "after" are directly comparable |
-| Human approval | The workflow stops and waits; nothing is applied without it | The brief's human-in-the-loop step, made the centre of the UI |
-| LangSmith: full trace + audit log + fix reasoning | LangSmith tracing plus a SQLite audit trail and a downloadable Markdown report | Tracing is for debugging; the audit report is for governance |
-| Docker, GCP/Azure | Dockerfile + compose, bound to localhost | Deploys unchanged to Cloud Run or Azure Container Instances |
-
 ## Testing and what was verified
 
 ```bash
@@ -366,8 +351,8 @@ See [EVALUATION.md](EVALUATION.md) for measured results and known limitations, a
 
 ## Design decisions
 
-- **The model never writes code that touches the data.** The capstone brief
-  suggests the fixer should generate a code patch. That was deliberately not
+- **The model never writes code that touches the data.** One common approach
+  has the fixer generate a code patch. That was deliberately not
   built. An LLM emitting a transformation that then executes against a real
   dataset is precisely the risk this design exists to remove. Instead the model
   is handed the list of fixes that are *legal for that specific defect* and

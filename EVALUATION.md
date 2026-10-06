@@ -99,7 +99,7 @@ The UI was driven end to end in real Microsoft Edge with **38 assertions**, all 
 - **A higher score can mean worse data.** Filling a mostly-empty column raises completeness while inventing values. The app shows the reasoning and leaves the decision to a person; it does not, and should not, optimise the number.
 - **Outlier detection is inter-quartile range only.** It assumes a roughly unimodal distribution. A genuinely bimodal column will have its smaller mode flagged.
 - **Invalid-format checks are name-driven.** Only columns named like an email or phone are checked, because a rule the user cannot predict is worse than no rule. A column called `contact_1` is not checked.
-- **Duplicate detection is exact-match only.** `"Jon Smith"` and `"John Smith"` are two different rows. Fuzzy entity resolution is a different project (capstone #41).
+- **Duplicate detection is exact-match only.** `"Jon Smith"` and `"John Smith"` are two different rows. Fuzzy entity resolution is a separate, harder problem.
 - **Ambiguous dates fall back to month-first.** When no value in the column has a first component above 12 there is no evidence either way. The applied-fix detail states which reading was used.
 - **Whole-file, in-memory.** The 200,000-row cap is real. Anything larger belongs in a chunked or Spark-based pipeline.
 - **No cross-column or business rules.** "Ship date must be after order date" and "revenue equals quantity times price" are not checked. Both are natural next additions and neither needs an LLM.
